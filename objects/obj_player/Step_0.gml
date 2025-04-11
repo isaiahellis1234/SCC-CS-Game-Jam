@@ -24,7 +24,7 @@ if place_meeting(x, y + 1, obj_solid) {
 
 }
 
-// Calculates the velocity vector of the player
+// Calculates the horizantal velocity of the player
 xSpd = (moveRight - moveLeft) * moveSpd;
 
 // Orientates the sprite based on direction of movement
