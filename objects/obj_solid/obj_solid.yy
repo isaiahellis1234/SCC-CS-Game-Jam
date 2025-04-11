@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_solid",
+  "eventList":[],
   "managed":true,
-  "name":"obj_player",
+  "name":"obj_solid",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"s_player_prototyping",
-    "path":"sprites/s_player_prototyping/s_player_prototyping.yy",
+    "name":"s_solid_prototyping",
+    "path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",
   },
   "spriteMaskId":null,
   "visible":true,

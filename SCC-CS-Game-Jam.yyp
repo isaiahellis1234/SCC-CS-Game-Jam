@@ -36,8 +36,10 @@
   "name":"SCC-CS-Game-Jam",
   "resources":[
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
     {"id":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"id":{"name":"s_player_prototyping","path":"sprites/s_player_prototyping/s_player_prototyping.yy",},},
+    {"id":{"name":"s_solid_prototyping","path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
