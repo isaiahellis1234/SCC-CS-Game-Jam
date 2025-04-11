@@ -13,5 +13,5 @@ xSpd = 0;
 // Dictates speed in the y-axis, start with none
 ySpd = 0;
 
-// Gravity
+// "Gravity" the player experiences
 grav = 0.5;

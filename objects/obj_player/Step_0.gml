@@ -28,15 +28,9 @@ if place_meeting(x, y + 1, obj_solid) {
 xSpd = (moveRight - moveLeft) * moveSpd;
 
 // Orientates the sprite based on direction of movement
-if xSpd < 0 {
-
-	image_xscale = -1;
-
-}
-
-else if xSpd > 0 {
-
-	image_xscale = 1;
+if xSpd != 0 { 
+	
+	image_xscale = sign(xSpd); 
 
 }
 
