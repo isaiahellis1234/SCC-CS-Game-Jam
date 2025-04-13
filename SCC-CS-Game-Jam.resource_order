@@ -17,6 +17,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_game","order":2,"path":"objects/obj_game/obj_game.yy",},
     {"name":"obj_solid","order":1,"path":"objects/obj_solid/obj_solid.yy",},
     {"name":"s_solid_prototyping","order":1,"path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",},
   ],
