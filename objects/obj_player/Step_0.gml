@@ -1,4 +1,4 @@
-// Checks if either A or D is held down, both either 0 or 1
+// Checks if buttons are held down, either 0 or 1
 var moveLeft = keyboard_check(ord("A"));
 var moveRight = keyboard_check(ord("D"));
 var jKey = keyboard_check(vk_space);
