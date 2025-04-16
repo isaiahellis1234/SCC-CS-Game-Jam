@@ -15,3 +15,12 @@ ySpd = 0;
 
 // "Gravity" the player experiences
 grav = 0.5;
+
+// Create cord for the grappling hook
+mx = x; // Hook X coord
+my = y; // Hook y corrd
+active = false; // If we are actually grappling
+
+wall_jump_speed = 4; // how hard you push away from the wall
+canWallJump = false;
+wallDir = 0; // -1 for left wall, 1 for right wall
