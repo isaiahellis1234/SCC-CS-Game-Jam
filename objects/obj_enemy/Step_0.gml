@@ -20,3 +20,8 @@ x += xspd;
 
 // Flip sprite to face the correct direction (optional)
 image_xscale = sign(xspd);
+
+if hp <= 0 {
+	instance_create_layer(x, y, "Instances", obj_bullet_collision_anim);
+	instance_destroy();
+}

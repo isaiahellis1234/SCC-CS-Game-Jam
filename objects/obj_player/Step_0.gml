@@ -37,6 +37,22 @@ if (onGround) {
     xSpd = -wallDir * wall_jump_speed;
 }
 
+if (onGround) {
+    ySpd = 0;
+    jump_count = 0; // Reset jump count when grounded
+    if (jKey) {
+        ySpd = -jSpd;
+        jump_count += 1;
+    }
+} else if (canWallJump and jKey) {
+    ySpd = -jSpd;
+    xSpd = -wallDir * wall_jump_speed;
+    jump_count = 1; // Reset to 1 so you can still double jump after wall jump
+} else if (jKey and jump_count < max_jumps) {
+    ySpd = -jSpd;
+    jump_count += 1;
+}
+
 // Wall sliding with a slow fall down
 if (canWallJump and ySpd > 2) {
     ySpd = 2;

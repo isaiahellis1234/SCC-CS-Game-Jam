@@ -24,3 +24,6 @@ active = false; // If we are actually grappling
 wall_jump_speed = 4; // how hard you push away from the wall
 canWallJump = false;
 wallDir = 0; // -1 for left wall, 1 for right wall
+
+jump_count = 0;
+max_jumps = 2; // regular + double
