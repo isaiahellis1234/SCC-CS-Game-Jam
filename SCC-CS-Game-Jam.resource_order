@@ -16,6 +16,7 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"fnt2","order":1,"path":"fonts/fnt2/fnt2.yy",},
     {"name":"obj_basic_enemy_bullet","order":10,"path":"objects/obj_basic_enemy_bullet/obj_basic_enemy_bullet.yy",},
     {"name":"obj_bullet_collision_anim","order":8,"path":"objects/obj_bullet_collision_anim/obj_bullet_collision_anim.yy",},
     {"name":"obj_camera","order":3,"path":"objects/obj_camera/obj_camera.yy",},
@@ -26,6 +27,8 @@
     {"name":"obj_regular_bullet","order":6,"path":"objects/obj_regular_bullet/obj_regular_bullet.yy",},
     {"name":"obj_solid_inv","order":7,"path":"objects/obj_solid_inv/obj_solid_inv.yy",},
     {"name":"obj_solid","order":1,"path":"objects/obj_solid/obj_solid.yy",},
+    {"name":"Room_Cutscene_1","order":3,"path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},
+    {"name":"Room_Cutscene_Transition_1","order":4,"path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},
     {"name":"Room2_Prototyping_Area","order":1,"path":"rooms/Room2_Prototyping_Area/Room2_Prototyping_Area.yy",},
     {"name":"roominit","order":2,"path":"rooms/roominit/roominit.yy",},
     {"name":"s_basic_enemy_bullet","order":8,"path":"sprites/s_basic_enemy_bullet/s_basic_enemy_bullet.yy",},

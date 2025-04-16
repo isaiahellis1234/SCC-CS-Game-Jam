@@ -36,6 +36,7 @@
   "name":"SCC-CS-Game-Jam",
   "resources":[
     {"id":{"name":"fnt1","path":"fonts/fnt1/fnt1.yy",},},
+    {"id":{"name":"fnt2","path":"fonts/fnt2/fnt2.yy",},},
     {"id":{"name":"obj_basic_enemy_bullet","path":"objects/obj_basic_enemy_bullet/obj_basic_enemy_bullet.yy",},},
     {"id":{"name":"obj_bullet_collision_anim","path":"objects/obj_bullet_collision_anim/obj_bullet_collision_anim.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
@@ -47,6 +48,8 @@
     {"id":{"name":"obj_regular_bullet","path":"objects/obj_regular_bullet/obj_regular_bullet.yy",},},
     {"id":{"name":"obj_solid_inv","path":"objects/obj_solid_inv/obj_solid_inv.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
+    {"id":{"name":"Room_Cutscene_1","path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},},
+    {"id":{"name":"Room_Cutscene_Transition_1","path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},},
     {"id":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"id":{"name":"Room2_Prototyping_Area","path":"rooms/Room2_Prototyping_Area/Room2_Prototyping_Area.yy",},},
     {"id":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
@@ -64,6 +67,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
+    {"roomId":{"name":"Room_Cutscene_1","path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},},
+    {"roomId":{"name":"Room_Cutscene_Transition_1","path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},},
     {"roomId":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"roomId":{"name":"Room2_Prototyping_Area","path":"rooms/Room2_Prototyping_Area/Room2_Prototyping_Area.yy",},},
   ],

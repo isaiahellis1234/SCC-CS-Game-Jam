@@ -1,107 +1,115 @@
 // Basic Imput
-var moveLeft  = keyboard_check(ord("A"));
-var moveRight = keyboard_check(ord("D"));
-var jKey      = keyboard_check_pressed(vk_space); // _pressed gives snappier jumps
-
-// gravity
-if (!active) {
-    if (ySpd < 10) ySpd += grav;
+if room == Room_Cutscene_1 {
+	x += 5;
+	if x > room_width {
+		room_goto_next()	
+	}
 }
+if room != Room_Cutscene_1 {
+	var moveLeft  = keyboard_check(ord("A"));
+	var moveRight = keyboard_check(ord("D"));
+	var jKey      = keyboard_check_pressed(vk_space); // _pressed gives snappier jumps
 
-// Regular Movement (not swinging)
-if (!active) {
-    xSpd = (moveRight - moveLeft) * moveSpd;
-}
+	// gravity
+	if (!active) {
+	    if (ySpd < 10) ySpd += grav;
+	}
 
-// Wall Jumping
-var onGround = place_meeting(x, y + 1, obj_solid);
-var canWallJump = false;
-var wallDir = 0;
+	// Regular Movement (not swinging)
+	if (!active) {
+	    xSpd = (moveRight - moveLeft) * moveSpd;
+	}
 
-if (!onGround) {
-    if (place_meeting(x - 1, y, obj_solid)) {
-        canWallJump = true;
-        wallDir = -1; // wall on left
-    } else if (place_meeting(x + 1, y, obj_solid)) {
-        canWallJump = true;
-        wallDir = 1; // wall on right
-    }
-}
+	// Wall Jumping
+	var onGround = place_meeting(x, y + 1, obj_solid);
+	var canWallJump = false;
+	var wallDir = 0;
 
-// Jumping
-if (onGround) {
-    ySpd = 0;
-    if (jKey) ySpd = -jSpd;
-} else if (canWallJump and jKey) {
-    ySpd = -jSpd;
-    xSpd = -wallDir * wall_jump_speed;
-}
+	if (!onGround) {
+	    if (place_meeting(x - 1, y, obj_solid)) {
+	        canWallJump = true;
+	        wallDir = -1; // wall on left
+	    } else if (place_meeting(x + 1, y, obj_solid)) {
+	        canWallJump = true;
+	        wallDir = 1; // wall on right
+	    }
+	}
 
-if (onGround) {
-    ySpd = 0;
-    jump_count = 0; // Reset jump count when grounded
-    if (jKey) {
-        ySpd = -jSpd;
-        jump_count += 1;
-    }
-} else if (canWallJump and jKey) {
-    ySpd = -jSpd;
-    xSpd = -wallDir * wall_jump_speed;
-    jump_count = 1; // Reset to 1 so you can still double jump after wall jump
-} else if (jKey and jump_count < max_jumps) {
-    ySpd = -jSpd;
-    jump_count += 1;
-}
+	// Jumping
+	if (onGround) {
+	    ySpd = 0;
+	    if (jKey) ySpd = -jSpd;
+	} else if (canWallJump and jKey) {
+	    ySpd = -jSpd;
+	    xSpd = -wallDir * wall_jump_speed;
+	}
 
-// Wall sliding with a slow fall down
-if (canWallJump and ySpd > 2) {
-    ySpd = 2;
-}
+	if (onGround) {
+	    ySpd = 0;
+	    jump_count = 0; // Reset jump count when grounded
+	    if (jKey) {
+	        ySpd = -jSpd;
+	        jump_count += 1;
+	    }
+	} else if (canWallJump and jKey) {
+	    ySpd = -jSpd;
+	    xSpd = -wallDir * wall_jump_speed;
+	    jump_count = 1; // Reset to 1 so you can still double jump after wall jump
+	} else if (jKey and jump_count < max_jumps) {
+	    ySpd = -jSpd;
+	    jump_count += 1;
+	}
 
-// Grappling Input
-if (mouse_check_button_pressed(mb_right)) {
-    mx = mouse_x;
-    my = mouse_y;
+	// Wall sliding with a slow fall down
+	if (canWallJump and ySpd > 2) {
+	    ySpd = 2;
+	}
 
-    if (place_meeting(mx, my, obj_grappling_block)) {
-        active = true;
+	// Grappling Input
+	if (mouse_check_button_pressed(mb_right)) {
+	    mx = mouse_x;
+	    my = mouse_y;
 
-        // Optional: give slight velocity toward grapple when hooking
-        var hook_dir = point_direction(x, y, mx, my);
-        xSpd += lengthdir_x(2, hook_dir);
-        ySpd += lengthdir_y(2, hook_dir);
-    }
-}
+	    if (place_meeting(mx, my, obj_grappling_block)) {
+	        active = true;
 
-if (mouse_check_button_released(mb_right)) {
-    active = false;
-}
+	        // Optional: give slight velocity toward grapple when hooking
+	        var hook_dir = point_direction(x, y, mx, my);
+	        xSpd += lengthdir_x(2, hook_dir);
+	        ySpd += lengthdir_y(2, hook_dir);
+	    }
+	}
 
-//`Grappling Physics
-if (active) {
-    // Apply gravity while swinging
-    if (ySpd < 10) ySpd += grav;
+	if (mouse_check_button_released(mb_right)) {
+	    active = false;
+		jump_count = 1;
+	}
 
-    // Add left/right influence
-    xSpd += (moveRight - moveLeft) * 0.4;
+	//`Grappling Physics
+	if (active) {
+	    // Apply gravity while swinging
+	    if (ySpd < 10) ySpd += grav;
 
-    // Pull player back toward the grapple if stretched too far
-    var dx = x - mx;
-    var dy = y - my;
-    var dist = point_distance(x, y, mx, my);
-    var rope_length = 100;
+	    // Add left/right influence
+	    xSpd += (moveRight - moveLeft) * 0.4;
 
-    if (dist > rope_length) {
-        var overshoot = dist - rope_length;
-        var pull_strength = 0.2;
+	    // Pull player back toward the grapple if stretched too far
+	    var dx = x - mx;
+	    var dy = y - my;
+	    var dist = point_distance(x, y, mx, my);
+	    var rope_length = 100;
 
-        // Pull back toward grapple
-        var pull_dir = point_direction(mx, my, x, y);
-        var pullX = lengthdir_x(overshoot * pull_strength, pull_dir);
-        var pullY = lengthdir_y(overshoot * pull_strength, pull_dir);
+	    if (dist > rope_length) {
+	        var overshoot = dist - rope_length;
+	        var pull_strength = 0.2;
 
-        xSpd -= pullX;
-        ySpd -= pullY;
+	        // Pull back toward grapple
+	        var pull_dir = point_direction(mx, my, x, y);
+	        var pullX = lengthdir_x(overshoot * pull_strength, pull_dir);
+	        var pullY = lengthdir_y(overshoot * pull_strength, pull_dir);
+
+	        xSpd -= pullX;
+	        ySpd -= pullY;
 
         // Remove outward momentum (tension)
         var dot = (xSpd * dx + ySpd * dy) / dist;
@@ -147,4 +155,13 @@ if (mouse_check_button_pressed(mb_left)) {
     } else {
         bullet.direction = 180; // left
     }
+}
+
+// MAKE SPRINTING ONLY FOR TESTING TURN OFF FOR PRODUCTION
+if keyboard_check(vk_shift) {
+	moveSpd = 20;	
+}
+else {
+	moveSpd = 5;
+}
 }
