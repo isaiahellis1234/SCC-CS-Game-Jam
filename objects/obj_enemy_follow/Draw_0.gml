@@ -1,12 +1,19 @@
-/*
+// Draw the enemy sprite
 draw_self();
 
-// Debug sensor points
-var sx = x + direction * sensor_offset_x;
-var sy = y + sensor_offset_y;
-draw_set_color(c_red);
-draw_circle(sx, sy + 1, 2, false);
-draw_circle(sx, y, 2, false);
-*/
+if (hp < hp_max) {
+	// Getting bars width and height
+	var bar_width = 50;
+	var bar_height = 6;
+	var bar_x = x - bar_width / 2;
+	var bar_y = y - sprite_height / 2 - 10;
 
-draw_self()
+	// Drawing bar
+	draw_set_color(c_gray);
+	draw_rectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, false);
+
+	// Drawing health
+	var hp_ratio = hp / hp_max;
+	draw_set_color(c_lime);
+	draw_rectangle(bar_x, bar_y, bar_x + (bar_width * hp_ratio), bar_y + bar_height, false);
+}

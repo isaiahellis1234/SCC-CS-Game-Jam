@@ -87,10 +87,10 @@ if room != Room_Cutscene_1 {
 
 	//`Grappling Physics
 	if (active) {
-	    // Apply gravity while swinging
+	    // gravity while swinging
 	    if (ySpd < 10) ySpd += grav;
 
-	    // Add left/right influence
+	    // left/right influence
 	    xSpd += (moveRight - moveLeft) * 0.4;
 
 	    // Pull player back toward the grapple if stretched too far
@@ -111,7 +111,7 @@ if room != Room_Cutscene_1 {
 	        xSpd -= pullX;
 	        ySpd -= pullY;
 
-        // Remove outward momentum (tension)
+        // Remove outward momentum 
         var dot = (xSpd * dx + ySpd * dy) / dist;
         xSpd -= (dx / dist) * dot;
         ySpd -= (dy / dist) * dot;
@@ -136,7 +136,7 @@ if (place_meeting(x, y + ySpd, obj_solid)) {
 }
 y += ySpd;
 
-// Sprite Facing (left or right)
+// left and right facing image
 if (xSpd != 0) {
     image_xscale = sign(xSpd);
 }
@@ -164,4 +164,10 @@ if keyboard_check(vk_shift) {
 else {
 	moveSpd = 5;
 }
+}
+
+// If enemy dies, create animation which will restart room
+if hp <= 0 {
+	instance_create_layer(x, y, "Instances", obj_player_death_restart_level);
+	instance_destroy()
 }

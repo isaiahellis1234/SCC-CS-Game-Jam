@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_regular_bullet",
-    "path":"sprites/s_regular_bullet/s_regular_bullet.yy",
+    "name":"s_basic_enemy_bullet",
+    "path":"sprites/s_basic_enemy_bullet/s_basic_enemy_bullet.yy",
   },
   "spriteMaskId":null,
   "visible":true,

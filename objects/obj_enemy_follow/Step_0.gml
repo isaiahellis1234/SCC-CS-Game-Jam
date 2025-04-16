@@ -1,4 +1,5 @@
-if (player != noone) {
+// Check if player exists and is not noone
+if (instance_exists(player) && player != noone) {
     var dist = point_distance(x, y, player.x, player.y);
     var dir = point_direction(x, y, player.x, player.y);
     var move_x = 0;
@@ -46,4 +47,28 @@ if (player != noone) {
     if (shoot_cooldown > 0) {
         shoot_cooldown -= 1;
     }
+} else {
+    // Optional: Idle behavior when player doesn't exist
+    // yspd still affected by gravity even if no player
+    var grav = 0.5;
+    if (!place_meeting(x, y + 1, obj_solid)) {
+        yspd += grav;
+    } else {
+        yspd = 0;
+    }
+
+    if (!place_meeting(x, y + yspd, obj_solid)) {
+        y += yspd;
+    } else {
+        while (!place_meeting(x, y + sign(yspd), obj_solid)) {
+            y += sign(yspd);
+        }
+        yspd = 0;
+    }
+}
+
+// Check for death
+if (hp <= 0) {
+    instance_create_layer(x, y, "Instances", obj_bullet_collision_anim);
+    instance_destroy();
 }

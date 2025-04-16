@@ -22,10 +22,10 @@ if room == Room_Cutscene_Transition_1 {
 	}
 
 	draw_set_font(fnt2);
-	draw_text(10, 10, "Press 'Enter' to continue.");
+	draw_text(10, 10, "Press 'Space' to continue.");
 
 	
-	if (keyboard_check_pressed(vk_enter)) {
+	if (keyboard_check_pressed(vk_space)) {
 		if (char_index_main == string_length(text_main) && char_index_dots == string_length(text_dotdotdot)) {
 			// move to next room
 			room_goto_next();

@@ -7,13 +7,13 @@ moveSpd = 5;
 // How fast the player jumps
 jSpd = 12;
 
-// Dictates speed in the x-axis, start with none
+// makes the x-axis speed
 xSpd = 0;
 
-// Dictates speed in the y-axis, start with none
+// makes the y-axis speed
 ySpd = 0;
 
-// "Gravity" the player experiences
+// gravity
 grav = 0.5;
 
 // Create cord for the grappling hook
@@ -27,3 +27,6 @@ wallDir = 0; // -1 for left wall, 1 for right wall
 
 jump_count = 0;
 max_jumps = 2; // regular + double
+
+hp = 2;
+hp_max = 10;
