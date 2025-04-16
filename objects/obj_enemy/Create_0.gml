@@ -1,3 +1,3 @@
-// Basic enemy logic, modify as needed for different use cases
-
-// Initializes variables needed for an enemy instance
+xspd = 1;
+yspd = 0;
+grav = 0;
