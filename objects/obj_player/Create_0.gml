@@ -28,5 +28,5 @@ wallDir = 0; // -1 for left wall, 1 for right wall
 jump_count = 0;
 max_jumps = 2; // regular + double
 
-hp = 2;
-hp_max = 10;
+hp = 5; // the health that starts
+hp_max = 5; // the max the health could be
