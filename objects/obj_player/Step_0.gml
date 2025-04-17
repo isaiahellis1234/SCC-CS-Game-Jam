@@ -171,3 +171,23 @@ if hp <= 0 {
 	instance_create_layer(x, y, "Instances", obj_player_death_restart_level);
 	instance_destroy()
 }
+
+//Animation
+if (!place_meeting(x,y+1,obj_solid))
+{
+	sprite_index = spr_hero_j;
+	image_speed = 0;
+	if (sign(ySpd) > 0) image_index = 1; else image_index = 0;
+}
+else
+{
+	image_speed = 1;
+	if (xSpd == 0)
+	{
+		sprite_index = spr_hero;	
+	}
+	else
+	{
+		sprite_index = spr_hero_run;	
+	}
+}

@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"s_player_prototyping",
-    "path":"sprites/s_player_prototyping/s_player_prototyping.yy",
+    "name":"spr_hero",
+    "path":"sprites/spr_hero/spr_hero.yy",
   },
   "spriteMaskId":null,
   "visible":true,
