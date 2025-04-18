@@ -55,6 +55,7 @@
     {"name":"s_solid_prototyping","order":1,"path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",},
     {"name":"spr_hero_j","order":1,"path":"sprites/spr_hero_j/spr_hero_j.yy",},
     {"name":"spr_hero_l","order":2,"path":"sprites/spr_hero_l/spr_hero_l.yy",},
+    {"name":"spr_hero_run_l","order":4,"path":"sprites/spr_hero_run_l/spr_hero_run_l.yy",},
     {"name":"spr_hero_run","order":3,"path":"sprites/spr_hero_run/spr_hero_run.yy",},
     {"name":"spr_MC","order":1,"path":"sprites/spr_MC/spr_MC.yy",},
     {"name":"spr_transition","order":1,"path":"sprites/spr_transition/spr_transition.yy",},
