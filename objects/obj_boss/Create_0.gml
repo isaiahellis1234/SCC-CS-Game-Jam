@@ -14,11 +14,11 @@ y_target = obj_player.y - 50; // The height the boss will jump to above the play
 x_speed = 0;
 y_speed = 0;
 
-hp = 100;
 phase = 1;
 attack_timer = 0;
 attack_state = 0; // Which attack is happening
 attack_cooldown = 0;
+move_speed = 0.05;
 
 target = noone;
 

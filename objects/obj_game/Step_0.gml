@@ -57,5 +57,5 @@ if room == Room2_Prototyping_Area {
 }
 
 if (room == Room_Boss && alarm[0] <= 0) {
-    alarm[0] = 2 * room_speed; // 2 seconds delay before the first spawn
+    alarm[0] = 1; // 2 seconds delay before the first spawn
 }

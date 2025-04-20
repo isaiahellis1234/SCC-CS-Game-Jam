@@ -1,11 +1,10 @@
 // Check if the boss's hp has dropped to 0 or below, destroy it
 if (hp <= 0) {
+	instance_create_layer(x, y, "Instances", obj_bullet_boss_death_anim);
     instance_destroy();
-    // Play explosion animation or victory scene
-    exit;
 }
 
-// Phase transition (change phases based on hp thresholds)
+// Phase transitio
 if (hp <= 50 && phase == 1) {
     phase = 2;
     attack_timer = 0;
@@ -21,7 +20,7 @@ if (hp <= 25 && phase == 2) {
 // Boss Movement: The boss follows the player continuously
 if (instance_exists(obj_player)) {
     // Follow the player
-    var follow_speed = 0.05; // Adjust this value to control the speed at which the boss follows the player
+    var follow_speed = move_speed; // Adjust this value to control the speed at which the boss follows the player
     move_towards_point(obj_player.x, obj_player.y, follow_speed);
 }
 
@@ -48,15 +47,8 @@ if (attack_timer > attack_cooldown) {
             break;
 
         case 3:
-            var r = irandom(2);
-            if (r == 0) {
-                rapid_laser_barrage(); // Full circle laser barrage
-            } else if (r == 1) {
-                laser_puddle();
-            } else {
-                energy_pulse();
-            }
-            attack_cooldown = 70; // Phase 3 cooldown
+			rapid_laser_barrage();
+            attack_cooldown = random_range(70, 200); // Phase 3 cooldown
             break;
     }
     attack_timer = 0; // Reset attack timer after each attack
@@ -103,19 +95,14 @@ function shockwave() {
 
 // Rapid laser barrage: Fires lasers in a full circle (360 degrees)
 function rapid_laser_barrage() {
-    var num_lasers = 16; // Number of lasers to fire
-    var angle_step = 360 / num_lasers; // Angle between lasers
+    var num_lasers = 16; // You can increase for a denser circle
+    var angle_step = 360 / num_lasers;
 
     for (var i = 0; i < num_lasers; i++) {
-        var angle = i * angle_step; // Calculate angle for each laser
+        var angle = i * angle_step;
         var laser = instance_create_layer(x, y, "Instances", obj_laser);
-
-        // Set the laser's direction and speed
         laser.direction = angle;
         laser.speed = 10;
-
-        // Debugging laser creation and direction
-        show_debug_message("Laser " + string(i) + " created at angle: " + string(angle) + " with speed: 10");
     }
 }
 

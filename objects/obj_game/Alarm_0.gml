@@ -11,7 +11,7 @@ for (var i = 0; i < array_length(block_ids); i++) {
 block_ids = [];
 
 // Spawn new 3 grappling blocks and save their IDs
-for (var i = 0; i < 3; i++) {
+for (var i = 0; i < 5; i++) {
     var new_block = instance_create_layer(random(room_width), random_range(100, 150), "Instances", obj_grappling_block);
     array_push(block_ids, new_block);
 }

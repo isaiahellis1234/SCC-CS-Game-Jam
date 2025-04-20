@@ -71,24 +71,28 @@ if room != Room_Cutscene_1 {
 	}
 
 	// Grappling Input
-	if (mouse_check_button_pressed(mb_right)) {
-	    mx = mouse_x;
-	    my = mouse_y;
+// Grappling Input
+if (mouse_check_button_pressed(mb_right)) {
+    mx = mouse_x;
+    my = mouse_y;
 
-	    if (place_meeting(mx, my, obj_grappling_block)) {
-	        active = true;
+    // Check if the grappling block exists before allowing the grapple
+    var grapple_block = instance_place(mx, my, obj_grappling_block);
+    if (grapple_block != noone) {
+        active = true;
 
-	        // Optional: give slight velocity toward grapple when hooking
-	        var hook_dir = point_direction(x, y, mx, my);
-	        xSpd += lengthdir_x(2, hook_dir);
-	        ySpd += lengthdir_y(2, hook_dir);
-	    }
-	}
+        // Optional: give slight velocity toward grapple when hooking
+        var hook_dir = point_direction(x, y, mx, my);
+        xSpd += lengthdir_x(2, hook_dir);
+        ySpd += lengthdir_y(2, hook_dir);
+    }
+}
 
-	if (mouse_check_button_released(mb_right)) {
-	    active = false;
-		jump_count = 1;
-	}
+if (mouse_check_button_released(mb_right)) {
+    active = false;
+    jump_count = 1;
+}
+
 
 	//Grappling Physics
 	if (active) {
