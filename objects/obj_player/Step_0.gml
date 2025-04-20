@@ -152,6 +152,7 @@ if room != Room_Cutscene_1 {
 
 	// Gun
 	if (mouse_check_button_pressed(mb_left)) {
+		audio_play_sound(snd_gunshot,1,false);
 		if (image_xscale == 1) {
 			var bullet = instance_create_layer(x + 25, y , "Instances", obj_regular_bullet);	
 
@@ -173,10 +174,12 @@ if room != Room_Cutscene_1 {
 	if (keyboard_check_pressed(ord("W"))) {
 		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
 		bullet.direction = 90;	
+		audio_play_sound(snd_gunshot,1,false);
 	}
 	if (keyboard_check_pressed(ord("S"))) {
 		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
 		bullet.direction = 270;	
+		audio_play_sound(snd_gunshot,1,false);
 	}
 
 	// MAKE SPRINTING ONLY FOR TESTING TURN OFF FOR PRODUCTION

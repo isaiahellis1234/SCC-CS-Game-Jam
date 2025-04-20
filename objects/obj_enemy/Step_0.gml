@@ -25,4 +25,5 @@ if hp <= 0 {
 	instance_create_layer(x, y - 50, "Instances", obj_coins);
 	instance_create_layer(x, y, "Instances", obj_bullet_collision_anim);
 	instance_destroy();
+	audio_play_sound(snd_explode,1,false);
 }
