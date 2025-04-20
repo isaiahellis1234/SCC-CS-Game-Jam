@@ -145,14 +145,20 @@ if room != Room_Cutscene_1 {
 	if (xSpd != 0) {
 	    image_xscale = sign(xSpd);
 	}
-
+	
 	// Clamping Movement
 	xSpd = clamp(xSpd * 0.98, -12, 12);
 	ySpd = clamp(ySpd * 0.98, -12, 12);
 
 	// Gun
 	if (mouse_check_button_pressed(mb_left)) {
-	    var bullet = instance_create_layer(x, y, "Instances", obj_regular_bullet);
+		if (image_xscale == 1) {
+			var bullet = instance_create_layer(x + 25, y , "Instances", obj_regular_bullet);	
+
+		} else {
+			var bullet = instance_create_layer(x - 25, y , "Instances", obj_regular_bullet);	
+			
+		}
 
 	    // Shoot in the direction the player is facing
 	    if (image_xscale == 1) {
@@ -177,6 +183,7 @@ if hp <= 0 {
 	instance_destroy();
 }
 
+
 //Animation
 if (!place_meeting(x,y+1,obj_solid)) {
 	sprite_index = spr_hero_j;
@@ -187,6 +194,9 @@ else {
 	image_speed = 1;
 	if (xSpd == 0) {
 		sprite_index = spr_hero;	
+	}
+	else if xSpd < 0 {
+		sprite_index = spr_hero_l;	
 	}
 	else {
 		sprite_index = spr_hero_run;	
