@@ -81,6 +81,7 @@
     {"id":{"name":"s_solid_prototyping","path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",},},
     {"id":{"name":"spr_hero_j","path":"sprites/spr_hero_j/spr_hero_j.yy",},},
     {"id":{"name":"spr_hero_l","path":"sprites/spr_hero_l/spr_hero_l.yy",},},
+    {"id":{"name":"spr_hero_run_l","path":"sprites/spr_hero_run_l/spr_hero_run_l.yy",},},
     {"id":{"name":"spr_hero_run","path":"sprites/spr_hero_run/spr_hero_run.yy",},},
     {"id":{"name":"spr_hero","path":"sprites/spr_hero/spr_hero.yy",},},
     {"id":{"name":"spr_MC","path":"sprites/spr_MC/spr_MC.yy",},},
