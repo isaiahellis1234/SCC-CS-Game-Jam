@@ -25,3 +25,5 @@ text_pause_two = 60; // frames to wait after main text
 pause_timer_two = 0;
 
 main_done = false;
+
+block_ids = [];
