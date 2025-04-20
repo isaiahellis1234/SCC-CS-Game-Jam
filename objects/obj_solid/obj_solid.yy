@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"s_solid_prototyping",
-    "path":"sprites/s_solid_prototyping/s_solid_prototyping.yy",
+    "name":"bg_tile",
+    "path":"sprites/bg_tile/bg_tile.yy",
   },
   "spriteMaskId":null,
   "visible":true,

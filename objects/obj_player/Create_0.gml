@@ -30,3 +30,5 @@ max_jumps = 2; // regular + double
 
 hp = 5; // the health that starts
 hp_max = 5; // the max the health could be
+
+coins = 0;

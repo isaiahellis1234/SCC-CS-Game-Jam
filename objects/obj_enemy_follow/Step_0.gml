@@ -69,6 +69,8 @@ if (instance_exists(player) && player != noone) {
 
 // Check for death
 if (hp <= 0) {
+	instance_create_layer(x + 25, y - 50, "Instances", obj_coins);
+	instance_create_layer(x - 25, y - 50, "Instances", obj_coins);
     instance_create_layer(x, y, "Instances", obj_bullet_collision_anim);
     instance_destroy();
 }

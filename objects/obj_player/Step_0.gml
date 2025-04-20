@@ -166,6 +166,17 @@ if room != Room_Cutscene_1 {
 	    } else {
 	        bullet.direction = 180; // left
 	    }
+		
+
+	}
+	
+	if (keyboard_check_pressed(ord("W"))) {
+		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
+		bullet.direction = 90;	
+	}
+	if (keyboard_check_pressed(ord("S"))) {
+		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
+		bullet.direction = 270;	
 	}
 
 	// MAKE SPRINTING ONLY FOR TESTING TURN OFF FOR PRODUCTION
