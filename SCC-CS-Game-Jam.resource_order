@@ -49,6 +49,7 @@
     {"name":"snd_coindrop","order":4,"path":"sounds/snd_coindrop/snd_coindrop.yy",},
     {"name":"snd_coinpickup","order":3,"path":"sounds/snd_coinpickup/snd_coinpickup.yy",},
     {"name":"snd_explode","order":2,"path":"sounds/snd_explode/snd_explode.yy",},
+    {"name":"snd_grapple","order":6,"path":"sounds/snd_grapple/snd_grapple.yy",},
     {"name":"snd_gunshotalt","order":5,"path":"sounds/snd_gunshotalt/snd_gunshotalt.yy",},
     {"name":"snd_walk_louder","order":1,"path":"sounds/snd_walk_louder/snd_walk_louder.yy",},
     {"name":"bg_darksky","order":2,"path":"sprites/bg_darksky/bg_darksky.yy",},

@@ -80,6 +80,7 @@ if (mouse_check_button_pressed(mb_right)) {
     var grapple_block = instance_place(mx, my, obj_grappling_block);
     if (grapple_block != noone) {
         active = true;
+		audio_play_sound(snd_grapple,1,false);
 
         // Optional: give slight velocity toward grapple when hooking
         var hook_dir = point_direction(x, y, mx, my);

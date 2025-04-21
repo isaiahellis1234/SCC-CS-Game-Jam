@@ -72,6 +72,7 @@
     {"id":{"name":"snd_coindrop","path":"sounds/snd_coindrop/snd_coindrop.yy",},},
     {"id":{"name":"snd_coinpickup","path":"sounds/snd_coinpickup/snd_coinpickup.yy",},},
     {"id":{"name":"snd_explode","path":"sounds/snd_explode/snd_explode.yy",},},
+    {"id":{"name":"snd_grapple","path":"sounds/snd_grapple/snd_grapple.yy",},},
     {"id":{"name":"snd_gunshot","path":"sounds/snd_gunshot/snd_gunshot.yy",},},
     {"id":{"name":"snd_gunshotalt","path":"sounds/snd_gunshotalt/snd_gunshotalt.yy",},},
     {"id":{"name":"snd_walk_louder","path":"sounds/snd_walk_louder/snd_walk_louder.yy",},},
@@ -112,8 +113,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
-    {"roomId":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},
     {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
+    {"roomId":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},
     {"roomId":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"roomId":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"roomId":{"name":"Room_Cutscene_1","path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},},
