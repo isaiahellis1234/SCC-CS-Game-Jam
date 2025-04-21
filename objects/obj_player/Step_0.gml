@@ -210,14 +210,23 @@ if (!place_meeting(x,y+1,obj_solid)) {
 	if (sign(ySpd) > 0) image_index = 1; else image_index = 0;
 }
 else {
-	image_speed = 1;
+		image_speed = 1;
 	if (xSpd == 0) {
-		sprite_index = spr_hero;	
+		if (image_xscale = 1) {
+		sprite_index = spr_hero;
+		}
+		else if (image_xscale = -1) {
+			sprite_index = spr_hero_l;
+		}
 	}
-	else if xSpd < 0 {
-		sprite_index = spr_hero_l;	
+	else if (xSpd > 0) {
+		sprite_index = spr_hero_run;
 	}
-	else {
-		sprite_index = spr_hero_run;	
+	else if (xSpd < 0) {
+			sprite_index = spr_hero_run_l;
 	}
 }
+
+//if (image_xscale = -1){
+//	sprite_index = spr_hero_l;
+//}
