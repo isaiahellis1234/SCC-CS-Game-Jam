@@ -113,9 +113,9 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
+    {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"roomId":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"roomId":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},
-    {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"roomId":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"roomId":{"name":"Room_Cutscene_1","path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},},
     {"roomId":{"name":"Room_Cutscene_Transition_1","path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},},
