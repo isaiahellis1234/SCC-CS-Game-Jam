@@ -67,6 +67,7 @@
     {"id":{"name":"Room_Cutscene_Transition_1","path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},},
     {"id":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},
     {"id":{"name":"Room2_Prototyping_Area","path":"rooms/Room2_Prototyping_Area/Room2_Prototyping_Area.yy",},},
+    {"id":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},
     {"id":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
     {"id":{"name":"snd_coindrop","path":"sounds/snd_coindrop/snd_coindrop.yy",},},
     {"id":{"name":"snd_coinpickup","path":"sounds/snd_coinpickup/snd_coinpickup.yy",},},
@@ -111,6 +112,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
+    {"roomId":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},
     {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"roomId":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"roomId":{"name":"Room1_Prototyping_Area","path":"rooms/Room1_Prototyping_Area/Room1_Prototyping_Area.yy",},},

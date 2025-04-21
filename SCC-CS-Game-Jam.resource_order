@@ -44,6 +44,7 @@
     {"name":"Room_Cutscene_1","order":3,"path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},
     {"name":"Room_Cutscene_Transition_1","order":4,"path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},
     {"name":"Room2_Prototyping_Area","order":1,"path":"rooms/Room2_Prototyping_Area/Room2_Prototyping_Area.yy",},
+    {"name":"Room3_Prototyping_Area","order":7,"path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},
     {"name":"roominit","order":2,"path":"rooms/roominit/roominit.yy",},
     {"name":"snd_coindrop","order":4,"path":"sounds/snd_coindrop/snd_coindrop.yy",},
     {"name":"snd_coinpickup","order":3,"path":"sounds/snd_coinpickup/snd_coinpickup.yy",},
