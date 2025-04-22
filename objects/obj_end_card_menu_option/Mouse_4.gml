@@ -1,1 +1,1 @@
-room_goto(Game_Level_1);
+room_goto_next();
