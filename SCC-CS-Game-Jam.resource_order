@@ -23,6 +23,7 @@
   "ResourceOrderSettings":[
     {"name":"fnt2","order":1,"path":"fonts/fnt2/fnt2.yy",},
     {"name":"fnt3","order":2,"path":"fonts/fnt3/fnt3.yy",},
+    {"name":"Font4","order":3,"path":"fonts/Font4/Font4.yy",},
     {"name":"obj_basic_enemy_bullet","order":9,"path":"objects/obj_basic_enemy_bullet/obj_basic_enemy_bullet.yy",},
     {"name":"obj_boss","order":14,"path":"objects/obj_boss/obj_boss.yy",},
     {"name":"obj_bullet_boss_death_anim","order":18,"path":"objects/obj_bullet_boss_death_anim/obj_bullet_boss_death_anim.yy",},
@@ -37,6 +38,7 @@
     {"name":"obj_laser","order":17,"path":"objects/obj_laser/obj_laser.yy",},
     {"name":"obj_missile","order":16,"path":"objects/obj_missile/obj_missile.yy",},
     {"name":"obj_non_jump_solid","order":20,"path":"objects/obj_non_jump_solid/obj_non_jump_solid.yy",},
+    {"name":"obj_Play","order":23,"path":"objects/obj_Play/obj_Play.yy",},
     {"name":"obj_player_death_restart_level","order":11,"path":"objects/obj_player_death_restart_level/obj_player_death_restart_level.yy",},
     {"name":"obj_reactor","order":21,"path":"objects/obj_reactor/obj_reactor.yy",},
     {"name":"obj_regular_bullet","order":6,"path":"objects/obj_regular_bullet/obj_regular_bullet.yy",},
@@ -46,6 +48,7 @@
     {"name":"End_Room","order":9,"path":"rooms/End_Room/End_Room.yy",},
     {"name":"Game_Level_1","order":8,"path":"rooms/Game_Level_1/Game_Level_1.yy",},
     {"name":"Level_One","order":5,"path":"rooms/Level_One/Level_One.yy",},
+    {"name":"Main_Menu","order":10,"path":"rooms/Main_Menu/Main_Menu.yy",},
     {"name":"Room_Boss","order":6,"path":"rooms/Room_Boss/Room_Boss.yy",},
     {"name":"Room_Cutscene_1","order":3,"path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},
     {"name":"Room_Cutscene_Transition_1","order":4,"path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},
@@ -90,6 +93,7 @@
     {"name":"spr_hero_run_l","order":4,"path":"sprites/spr_hero_run_l/spr_hero_run_l.yy",},
     {"name":"spr_hero_run","order":3,"path":"sprites/spr_hero_run/spr_hero_run.yy",},
     {"name":"spr_MC","order":1,"path":"sprites/spr_MC/spr_MC.yy",},
+    {"name":"spr_Play","order":21,"path":"sprites/spr_Play/spr_Play.yy",},
     {"name":"spr_transition","order":1,"path":"sprites/spr_transition/spr_transition.yy",},
   ],
 }
