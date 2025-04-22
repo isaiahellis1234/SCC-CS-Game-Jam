@@ -1,0 +1,1 @@
+room_goto(Game_Level_1);
