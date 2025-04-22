@@ -1,3 +1,9 @@
+if bbox_top > room_height {
+
+	room_restart();
+
+}
+
 if room == Room_Cutscene_1 {
 	x += 5;
 	sprite_index = spr_hero_run;
