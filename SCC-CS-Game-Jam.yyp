@@ -62,6 +62,7 @@
     {"id":{"name":"obj_shockwave","path":"objects/obj_shockwave/obj_shockwave.yy",},},
     {"id":{"name":"obj_solid_inv","path":"objects/obj_solid_inv/obj_solid_inv.yy",},},
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
+    {"id":{"name":"Game_Level_1","path":"rooms/Game_Level_1/Game_Level_1.yy",},},
     {"id":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"id":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"id":{"name":"Room_Cutscene_1","path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},},
@@ -115,6 +116,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"roominit","path":"rooms/roominit/roominit.yy",},},
+    {"roomId":{"name":"Game_Level_1","path":"rooms/Game_Level_1/Game_Level_1.yy",},},
     {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"roomId":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"roomId":{"name":"Room3_Prototyping_Area","path":"rooms/Room3_Prototyping_Area/Room3_Prototyping_Area.yy",},},

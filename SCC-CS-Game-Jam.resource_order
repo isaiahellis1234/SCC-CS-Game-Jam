@@ -40,6 +40,7 @@
     {"name":"obj_shockwave","order":18,"path":"objects/obj_shockwave/obj_shockwave.yy",},
     {"name":"obj_solid_inv","order":7,"path":"objects/obj_solid_inv/obj_solid_inv.yy",},
     {"name":"obj_solid","order":1,"path":"objects/obj_solid/obj_solid.yy",},
+    {"name":"Game_Level_1","order":8,"path":"rooms/Game_Level_1/Game_Level_1.yy",},
     {"name":"Level_One","order":5,"path":"rooms/Level_One/Level_One.yy",},
     {"name":"Room_Boss","order":6,"path":"rooms/Room_Boss/Room_Boss.yy",},
     {"name":"Room_Cutscene_1","order":3,"path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},
