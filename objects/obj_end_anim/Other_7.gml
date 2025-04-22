@@ -1,0 +1,1 @@
+room_goto_next(); // Goes to the end of the game!

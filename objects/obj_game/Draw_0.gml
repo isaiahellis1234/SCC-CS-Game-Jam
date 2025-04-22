@@ -47,3 +47,10 @@ if room == Room1_Prototyping_Area {
 	draw_set_color(c_white);
 	draw_text(screen_x, screen_y, "This text stays fixed in the world");
 }
+
+if room == End_Room {
+	draw_set_font(fnt3);
+	
+	draw_set_color(c_white);
+	draw_text(300, 300, "To save the people, you must give the greatest sacrifice");
+}
