@@ -22,3 +22,4 @@ move_speed = 0.05;
 
 target = noone;
 
+alarm[0] = random_range(1, 5) * room_speed;

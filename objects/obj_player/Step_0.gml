@@ -1,3 +1,9 @@
+if bbox_top > room_height {
+
+	room_restart();
+
+}
+
 if room == Room_Cutscene_1 {
 	x += 5;
 	sprite_index = spr_hero_run;
@@ -128,23 +134,25 @@ if (mouse_check_button_released(mb_right)) {
 	    }
 	}
 
-	// Horizontal Collision
-	if (place_meeting(x + xSpd, y, obj_solid)) {
-	    while (!place_meeting(x + sign(xSpd), y, obj_solid)) {
-	        x += sign(xSpd);
-	    }
-	    xSpd = 0;
+// Combined Horizontal Collision
+if (place_meeting(x + xSpd, y, obj_solid) || place_meeting(x + xSpd, y, obj_non_jump_solid)) {
+   while (!place_meeting(x + sign(xSpd), y, obj_solid) && !place_meeting(x + sign(xSpd), y, obj_non_jump_solid)) {
+		 x += sign(xSpd);
 	}
-	x += xSpd;
 
-	// Vertical Collision
-	if (place_meeting(x, y + ySpd, obj_solid)) {
-	    while (!place_meeting(x, y + sign(ySpd), obj_solid)) {
-	        y += sign(ySpd);
-	    }
-	    ySpd = 0;
-	}
-	y += ySpd;
+    xSpd = 0;
+}
+x += xSpd;
+
+// Combined Vertical Collision
+if (place_meeting(x, y + ySpd, obj_solid) || place_meeting(x, y + ySpd, obj_non_jump_solid)) {
+    while (!place_meeting(x, y + sign(ySpd), obj_solid) && !place_meeting(x, y + sign(ySpd), obj_non_jump_solid)) {
+        y += sign(ySpd);
+    }
+    ySpd = 0;
+}
+y += ySpd;
+
 
 	// left and right facing image
 	if (xSpd != 0) {
@@ -156,35 +164,20 @@ if (mouse_check_button_released(mb_right)) {
 	ySpd = clamp(ySpd * 0.98, -12, 12);
 
 	// Gun
+	// Gun
 	if (mouse_check_button_pressed(mb_left)) {
-		audio_play_sound(snd_gunshot,1,false);
-		if (image_xscale == 1) {
-			var bullet = instance_create_layer(x + 25, y , "Instances", obj_regular_bullet);	
+	    audio_play_sound(snd_gunshot, 1, false);
 
-		} else {
-			var bullet = instance_create_layer(x - 25, y , "Instances", obj_regular_bullet);	
-			
-		}
+	    var angle = point_direction(x, y, mouse_x, mouse_y);
 
-	    // Shoot in the direction the player is facing
-	    if (image_xscale == 1) {
-	        bullet.direction = 0; // right
-	    } else {
-	        bullet.direction = 180; // left
-	    }
-		
+	    var bulletX = x + lengthdir_x(25, angle);
+	    var bulletY = y + lengthdir_y(25, angle);
 
-	}
-	
-	if (keyboard_check_pressed(ord("W"))) {
-		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
-		bullet.direction = 90;	
-		audio_play_sound(snd_gunshot,1,false);
-	}
-	if (keyboard_check_pressed(ord("S"))) {
-		var bullet = instance_create_layer(x, y , "Instances", obj_regular_bullet);	
-		bullet.direction = 270;	
-		audio_play_sound(snd_gunshot,1,false);
+	    var bullet = instance_create_layer(bulletX, bulletY, "Instances", obj_regular_bullet);
+
+	    bullet.direction = angle;
+	    bullet.image_angle = angle; // Rotates bullet sprite to face direction
+	    bullet.speed = 12;
 	}
 
 	// MAKE SPRINTING ONLY FOR TESTING TURN OFF FOR PRODUCTION

@@ -59,3 +59,22 @@ if room == Room2_Prototyping_Area {
 if (room == Room_Boss && alarm[0] <= 0) {
     alarm[0] = 1; // 2 seconds delay before the first spawn
 }
+
+if room == Game_Level_1 {
+	if keyboard_check_pressed(ord("P")) {
+		with (obj_player) {
+			obj_player.x = 170;
+			obj_player.y = 600;
+		}
+	}
+}
+
+// RESET PLAYER POSITION MID-GAME
+if (room == Room_Boss) {
+	if keyboard_check_pressed(ord("P")) {
+		with (obj_player) {
+			obj_player.x = 225;
+			obj_player.y = 580;
+		}
+	}
+}
