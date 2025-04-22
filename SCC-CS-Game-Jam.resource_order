@@ -48,6 +48,7 @@
     {"name":"obj_transition","order":25,"path":"objects/obj_transition/obj_transition.yy",},
     {"name":"End_Room","order":9,"path":"rooms/End_Room/End_Room.yy",},
     {"name":"Game_Level_1","order":8,"path":"rooms/Game_Level_1/Game_Level_1.yy",},
+    {"name":"Game_Level_2","order":11,"path":"rooms/Game_Level_2/Game_Level_2.yy",},
     {"name":"Level_One","order":5,"path":"rooms/Level_One/Level_One.yy",},
     {"name":"Room_Boss","order":6,"path":"rooms/Room_Boss/Room_Boss.yy",},
     {"name":"Room_Cutscene_1","order":3,"path":"rooms/Room_Cutscene_1/Room_Cutscene_1.yy",},

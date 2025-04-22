@@ -59,6 +59,8 @@ if room == Room_End_Card {
 	draw_set_font(fnt1);
 	
 	draw_set_color(c_white);
-	draw_text(300, 300, "You have saved the people at the expense of yourself...");
-	draw_text(300, 325, "You-- We have won!");
+	draw_text(300, 200, "You have saved the people at the expense of yourself...");
+	draw_text(200, 300, "The AI that ctronlled the world with lies and brainwashing is now over...");
+	draw_text(300, 400, "Someday maybe the people will be free once again!");
+	draw_text(550, 500, "You-- We have won!!!");
 }
