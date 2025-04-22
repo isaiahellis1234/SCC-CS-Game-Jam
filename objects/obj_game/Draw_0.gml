@@ -54,3 +54,11 @@ if room == End_Room {
 	draw_set_color(c_white);
 	draw_text(300, 300, "To save the people, you must give the greatest sacrifice");
 }
+
+if room == Room_End_Card {
+	draw_set_font(fnt1);
+	
+	draw_set_color(c_white);
+	draw_text(300, 300, "You have saved the people at the expense of yourself...");
+	draw_text(300, 325, "You-- We have won!");
+}
