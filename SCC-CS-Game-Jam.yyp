@@ -36,7 +36,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"SCC-CS-Game-Jam",
   "resources":[
@@ -73,6 +73,7 @@
     {"id":{"name":"End_Room","path":"rooms/End_Room/End_Room.yy",},},
     {"id":{"name":"Game_Level_1","path":"rooms/Game_Level_1/Game_Level_1.yy",},},
     {"id":{"name":"Game_Level_2","path":"rooms/Game_Level_2/Game_Level_2.yy",},},
+    {"id":{"name":"Game_Level_3","path":"rooms/Game_Level_3/Game_Level_3.yy",},},
     {"id":{"name":"Level_One","path":"rooms/Level_One/Level_One.yy",},},
     {"id":{"name":"Main_Menu","path":"rooms/Main_Menu/Main_Menu.yy",},},
     {"id":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
@@ -140,6 +141,7 @@
     {"roomId":{"name":"Room_Cutscene_Transition_1","path":"rooms/Room_Cutscene_Transition_1/Room_Cutscene_Transition_1.yy",},},
     {"roomId":{"name":"Game_Level_1","path":"rooms/Game_Level_1/Game_Level_1.yy",},},
     {"roomId":{"name":"Game_Level_2","path":"rooms/Game_Level_2/Game_Level_2.yy",},},
+    {"roomId":{"name":"Game_Level_3","path":"rooms/Game_Level_3/Game_Level_3.yy",},},
     {"roomId":{"name":"Room_Boss","path":"rooms/Room_Boss/Room_Boss.yy",},},
     {"roomId":{"name":"End_Room","path":"rooms/End_Room/End_Room.yy",},},
     {"roomId":{"name":"Room_End_Card","path":"rooms/Room_End_Card/Room_End_Card.yy",},},
