@@ -1,6 +1,37 @@
 // Each frame, check if player has exited camera view, if so, change room
 // (Subject to change, looking into side scrolling)
 
+if (room == Room_Cutscene_0) {
+	type_timer++;
+	
+	if (type_timer >= type_speed) {
+		if (char_index_exp1 < string_length(text_exposition1)) {
+			char_index_exp1++;
+		} else if (char_index_exp2 < string_length(text_exposition2)) {
+			char_index_exp2++;
+		}
+		else if (char_index_exp2_2 < string_length(text_exposition2_2)) {
+			char_index_exp2_2++;
+		}
+		else if (char_index_exp3 < string_length(text_exposition3)) {
+			char_index_exp3++;
+		}
+		else if (char_index_exp4 < string_length(text_exposition4)) {
+			char_index_exp4++;
+		}
+		else if (char_index_exp4_2 < string_length(text_exposition4_2)) {
+			char_index_exp4_2++;
+		}
+		else if (pause_timer_exp < text_pause_exp) {
+			pause_timer_exp++;
+		} 
+		else if (char_index_exp5 < string_length(text_exposition5)) {
+				char_index_exp5++;
+			}
+			type_timer = 0;
+		}
+}
+
 if (room == Room_Cutscene_1) {
 	type_timer++;
 

@@ -1,3 +1,37 @@
+if (room == Room_Cutscene_0) {
+	draw_set_font(fnt1);
+	draw_set_color(c_white);
+	
+	draw_text(room_width / 2 - cutscene_exp_x_placement, room_height / 2 - cutscene_exp_y_placement, string_copy(text_exposition1, 1, char_index_exp1));
+	
+	if (char_index_exp1 >= string_length(text_exposition1)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement - 65, room_height / 2 - cutscene_exp_y_placement + 50, string_copy(text_exposition2, 1, char_index_exp2));
+	}
+	if (char_index_exp2 >= string_length(text_exposition2)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement + 475, room_height / 2 - cutscene_exp_y_placement + 100, string_copy(text_exposition2_2, 1, char_index_exp2_2));
+	}
+	if (char_index_exp2_2 >= string_length(text_exposition2_2)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement + 63, room_height / 2 - cutscene_exp_y_placement + 150, string_copy(text_exposition3, 1, char_index_exp3));
+	}
+	if (char_index_exp3 >= string_length(text_exposition3)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement - 78, room_height / 2 - cutscene_exp_y_placement + 200, string_copy(text_exposition4, 1, char_index_exp4));
+	}
+	if (char_index_exp4 >= string_length(text_exposition4)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement - 25, room_height / 2 - cutscene_exp_y_placement + 250, string_copy(text_exposition4_2, 1, char_index_exp4_2));
+	}
+	if (char_index_exp4_2 >= string_length(text_exposition4_2)){
+		draw_text(room_width / 2 - cutscene_exp_x_placement + 320, room_height / 2 - cutscene_exp_y_placement + 420, string_copy(text_exposition5, 1, char_index_exp5));
+	}
+	
+	draw_set_font(fnt2);
+	draw_text(10, 10, "Press 'Space' to continue.");
+	
+	if (keyboard_check_pressed(vk_space)) {
+			// move to next room
+			room_goto_next();
+		}
+}
+
 if (room == Room_Cutscene_1) {
 	draw_set_font(fnt1);
 	draw_set_color(c_white);
