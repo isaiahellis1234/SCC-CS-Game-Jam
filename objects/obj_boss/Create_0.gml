@@ -1,6 +1,6 @@
 // Basic stats
-hp = 100;
-max_hp = 100;
+hp = 1000;
+max_hp = 1000;
 speed = 3; // Speed of movement
 jump_height = 12; // How high the boss jumps
 fall_speed = 0; // To simulate gravity

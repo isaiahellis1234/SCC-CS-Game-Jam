@@ -5,13 +5,13 @@ if (hp <= 0) {
 }
 
 // Phase transitio
-if (hp <= 50 && phase == 1) {
+if (hp <= 500 && phase == 1) {
     phase = 2;
     attack_timer = 0;
     show_debug_message("Phase changed to 2");
 }
 
-if (hp <= 25 && phase == 2) {
+if (hp <= 250 && phase == 2) {
     phase = 3;
     attack_timer = 0;
     show_debug_message("Phase changed to 3");
@@ -34,7 +34,7 @@ if (attack_timer > attack_cooldown) {
             } else {
                 ground_slam();
             }
-            attack_cooldown = 90; // Phase 1 cooldown
+            attack_cooldown = 120; // Phase 1 cooldown
             break;
 
         case 2:
@@ -43,12 +43,12 @@ if (attack_timer > attack_cooldown) {
             } else {
                 shockwave();
             }
-            attack_cooldown = 80; // Phase 2 cooldown
+            attack_cooldown = 100; // Phase 2 cooldown
             break;
 
         case 3:
 			rapid_laser_barrage();
-            attack_cooldown = random_range(70, 200); // Phase 3 cooldown
+            attack_cooldown = random_range(100, 230); // Phase 3 cooldown
             break;
     }
     attack_timer = 0; // Reset attack timer after each attack
