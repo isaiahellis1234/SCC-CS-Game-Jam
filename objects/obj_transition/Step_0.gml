@@ -1,3 +1,6 @@
+// Use after obj_player touches the obj_transition_obj
+// It goes to the next room
+
 if (fading_out) {
     transition_alpha += transition_speed;
     if (transition_alpha >= 1) {

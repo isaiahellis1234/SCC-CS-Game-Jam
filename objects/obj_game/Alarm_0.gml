@@ -1,3 +1,4 @@
+
 // Destroy the previously spawned blocks
 // Start fading out old blocks instead of instantly destroying
 for (var i = 0; i < array_length(block_ids); i++) {
