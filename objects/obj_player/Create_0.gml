@@ -33,3 +33,5 @@ hp = 100; // the health that starts
 hp_max = 100; // the max the health could be
 
 coins = 0;
+
+damage_timer = 0; // Start with zero so it damages right away

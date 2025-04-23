@@ -195,6 +195,12 @@ if hp <= 0 {
 	instance_destroy();
 }
 
+// Makes it so when not touching enemy damage doesn't happen
+if (!place_meeting(x, y, obj_enemy)) {
+    damage_timer = 0;
+}
+
+
 
 //Animation
 if (!place_meeting(x,y+1,obj_solid)) {
