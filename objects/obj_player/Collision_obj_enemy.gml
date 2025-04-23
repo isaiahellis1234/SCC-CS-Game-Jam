@@ -5,7 +5,7 @@ if (bbox_bottom > other.bbox_top + 5) {
 
     if (damage_timer <= 0) {
         // Deal damage
-        hp -= 1; 
+        hp -= 10; 
         damage_timer = 0.2 * room_speed; // Quater of a second cooldown
     }
 
