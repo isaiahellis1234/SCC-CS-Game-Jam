@@ -50,6 +50,7 @@ if room != Room_Cutscene_1 {
 
 	// Jumping
 	if (jKey) {
+		audio_play_sound(snd_jump,1,false);
 	    if (onGround) {
 	        ySpd = -jSpd;
 	        jump_count = 1;
@@ -191,6 +192,7 @@ y += ySpd;
 
 // If enemy dies, create animation which will restart room
 if hp <= 0 {
+	audio_play_sound(snd_bigexplosion,1,false);
 	instance_create_layer(x, y, "Instances", obj_player_death_restart_level);
 	instance_destroy();
 }
@@ -204,10 +206,18 @@ if (!place_meeting(x, y, obj_enemy)) {
 
 //Animation
 if (!place_meeting(x,y+1,obj_solid)) {
-	sprite_index = spr_hero_j;
-	image_speed = 0;
-	if (sign(ySpd) > 0) image_index = 1; else image_index = 0;
+	if (image_xscale = 1) {
+		sprite_index = spr_hero_j;
+		image_speed = 0;
+			if (sign(ySpd) > 0) image_index = 1; else image_index = 0;
+	}
+	else if (image_xscale = -1) {
+		sprite_index = spr_jump_l;
+		image_speed = 0;
+			if (sign(ySpd) > 0) image_index = 1; else image_index = 0;
+	}
 }
+
 else {
 		image_speed = 1;
 	if (xSpd == 0) {

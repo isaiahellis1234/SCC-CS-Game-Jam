@@ -1,5 +1,6 @@
 // Check if the boss's hp has dropped to 0 or below, destroy it
 if (hp <= 0) {
+	audio_play_sound(snd_biggestexplosion,1,false);
 	instance_create_layer(x, y, "Instances", obj_bullet_boss_death_anim);
     instance_destroy();
 }
